@@ -267,9 +267,9 @@ input {
 .home {
     background: url('../img/h1.png');
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: calc(100% - 160px) center;
     height: 100vh;
-    padding: 0.2rem 1.4rem;
+    padding: 0.6rem 1.4rem;
     /* background-color: var(--box-color); */
 }
 
@@ -405,16 +405,18 @@ input {
 
 /*===== About Section =====*/
 .about_container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the items */
+    padding: 2rem; /* Optional: adjust padding as needed */
 }
 
-.about_img {
+/* .about_img {
     width: 480px;
     border-radius: 50%;
     justify-self: center;
-}
+} */
 
 .about_heading {
     font-size: var(--h3-font-size);
@@ -422,24 +424,24 @@ input {
 }
 
 .about_description {
-    text-align: justify;
-    padding-right: 6rem;
+    text-align: justify; /* If you prefer justified text */
+    padding: 0 12rem; /* Adjust padding for side spacing */
     margin-bottom: var(--mb-2);
 }
 
 .about_info {
-    grid-template-columns: repeat(3, 140px);
-    column-gap: .5rem;
+    display: flex;
+    justify-content: center; /* Center info boxes horizontally */
+    gap: .5rem; /* Space between info boxes */
     margin-bottom: var(--mb-3);
 }
-
-
 
 .about_box {
     text-align: center;
     border-radius: .25rem;
     padding: 1rem 1.25rem;
     background-color: var(--box-color);
+    margin: 0.4rem; /* Optional: adjust margin for spacing */
 }
 
 .about_icon {
